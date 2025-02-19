@@ -1,6 +1,8 @@
-git config -- global user.name Vitor-Ortiz
-git config -- global user.email vitorortizoficial@gmail.com
+git config --global user.name Vitor-Ortiz
+git config --global user.email vitorortizoficial@gmail.com
 
 npx create-expo-app@latest StickerSmash
 
+npx expo start --localhost --android
 
+npm run reset-project 
