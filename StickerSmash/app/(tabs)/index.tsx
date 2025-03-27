@@ -6,7 +6,7 @@ import * as ImagePicker from 'expo-image-picker';
 import IconButton from "@/components/IconButton";
 import CircleButton from "@/components/CircleButton";
 
-const PlaceholderImage = require('@/assets/images/background-image.png')
+const PlaceholderImage = require('@/assets/images/background-image.png');
 
 export default function Index() {
 
@@ -30,41 +30,40 @@ export default function Index() {
       mediaTypes: ['images'],
       allowsEditing: true,
       quality: 1,
-    })
+    });
 
     if (!result.canceled) {
       setSelectedImage(result.assets[0].uri);
       setShowAppOptions(true);
     } else {
-      alert("Você não escolheu nenhuma imagem");
+      alert("Você não escolheu nenhuma imagem!!!");
     }
   }
 
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
-        <ImageViewer imgSource={PlaceholderImage} selectedImage={selectedImage} />
+        <ImageViewer imgSource={PlaceholderImage} selectedImage={selectedImage}/>
       </View>
       {showAppOptions ? (
         <View style={styles.optionsContainer}>
           <View style={styles.optionsRow}>
-            <IconButton icon="refresh" label="Resetar" onPress={onReset}/>
+            <IconButton icon="refresh" label="Resetar" onPress={onReset} />
             <CircleButton onPress={onAddSticker} />
-            <IconButton icon="save-alt" label="Salver" onPress={onSaveImageAsync} />
-          <View/>
-          
+            <IconButton icon="save-alt" label="Salvar" onPress={onSaveImageAsync} />
+          </View>
         </View>
       ) : (
         <View style={styles.footerContainer}>
           <Button
-            label="Escolher uma foto"
+            label="Escolher uma Foto"
             theme="primary"
             onPress={pickImageAsync}
           />
-          <Button label="Usar esta foto" onPress={() => setShowAppOptions(true)} />
+          <Button label="Usar esta Foto" onPress={() => setShowAppOptions(true)}/>
         </View>
       )}
-    </View >
+    </View>
   );
 }
 
@@ -72,7 +71,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#25292e',
-    justifyContent: "center",
     alignItems: "center",
   },
   imageContainer: {
@@ -81,6 +79,13 @@ const styles = StyleSheet.create({
   footerContainer: {
     flex: 1 / 3,
     alignItems: 'center',
-    justifyContent: 'center'
+  },
+  optionsContainer: {
+    position: 'absolute',
+    bottom: 80,
+  },
+  optionsRow: {
+    alignItems: 'center',
+    flexDirection: 'row',
   }
 })
