@@ -1,7 +1,7 @@
 fcqfc
 
-git config --global user.name Vitor-Ortiz
-git config --global user.email vitorortizoficial@gmail.com
+git config --global user.name anglusa
+git config --global user.email otavio.baroni@etec.sp.gov.br
 
 npx create-expo-app@latest StickerSmash
 
