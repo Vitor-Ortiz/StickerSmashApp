@@ -1,4 +1,4 @@
-fcqfc
+fcqfc (faz certo que funciona caralho)
 
 git config --global user.name anglusa
 git config --global user.email otavio.baroni@etec.sp.gov.br
