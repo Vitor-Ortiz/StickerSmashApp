@@ -17,10 +17,10 @@ export default function EmojiSticker({ imageSize, stickerSource }: Props) {
   const doubleTap = Gesture.Tap()
     .numberOfTaps(2)
     .onStart(() => {
-      if (scaleImage.value !== imageSize * 2) {
-        scaleImage.value = scaleImage.value * 2;
+      if (scaleImage.value !== imageSize * 3) {
+        scaleImage.value = scaleImage.value * 3;
       } else {
-        scaleImage.value = Math.round(scaleImage.value / 2);
+        scaleImage.value = Math.round(scaleImage.value / 3);
       }
     });
 
